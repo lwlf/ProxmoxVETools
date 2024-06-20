@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# move-local-btrfs-storage-mnt-pve
+test ! $(pvesm status | grep "local-btrfs") && echo "PVE 存储 local-btrfs 不存在"
+
 # 获取根目录磁盘分区
 system_partition=$(findmnt -T / -o SOURCE | awk 'NR==2')
 system_partition_properties=($(lsblk -lno name,tran,rota $system_partition))
