@@ -84,7 +84,7 @@ if [ "$storage_type" == "sata" ]; then
     if [  "${select_disk_arry[5]}" == "0" ]; then
         storage_type="ssd"
     else
-        storage_type="hhd"
+        storage_type="hdd"
     fi
 else
     storage_type="$storage_type"
