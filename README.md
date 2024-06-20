@@ -20,7 +20,7 @@ curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/add-btrfs-st
 下载脚本
 
 ```shell
-curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/remove-btrfs-storage.sh && chmod +x add-btrfs-storage.sh
+curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/remove-btrfs-storage.sh && chmod +x remove-btrfs-storage.sh
 ```
 
 使用脚本
@@ -34,7 +34,7 @@ curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/remove-btrfs
 下载脚本
 
 ```shell
-curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/add-existing-btrfs-storage.sh && chmod +x add-btrfs-storage.sh
+curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/add-existing-btrfs-storage.sh && chmod +x add-existing-btrfs-storage.sh
 ```
 
 使用脚本
@@ -48,7 +48,7 @@ curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/add-existing
 下载脚本
 
 ```shell
-curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/move-local-btrfs-storage-mnt-pve.sh && chmod +x add-btrfs-storage.sh
+curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/move-local-btrfs-storage-mnt-pve.sh && chmod +x move-local-btrfs-storage-mnt-pve.sh
 ```
 
 使用脚本
@@ -56,3 +56,19 @@ curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/move-local-b
 ```shell
 ./move-local-btrfs-storage-mnt-pve.sh
 ```
+
+# 修改 PVE 源脚本使用说明
+
+下载脚本
+
+```shell
+curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/change-mirrors.sh && chmod +x change-mirrors.sh
+```
+
+使用脚本
+
+```shell
+./change-mirrors.sh
+```
+
+
