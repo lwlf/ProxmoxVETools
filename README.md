@@ -42,3 +42,17 @@ curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/add-existing
 ```shell
 ./add-existing-btrfs-storage.sh
 ```
+
+# 移动 local-btrfs 存储至 /mnt/pve 脚本使用说明
+
+下载脚本
+
+```shell
+curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/move-local-btrfs-storage-mnt-pve.sh && chmod +x add-btrfs-storage.sh
+```
+
+使用脚本
+
+```shell
+./move-local-btrfs-storage-mnt-pve.sh
+```
