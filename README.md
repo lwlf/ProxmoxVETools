@@ -20,13 +20,13 @@ curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/add-btrfs-st
 下载脚本
 
 ```shell
-curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/remove-storage.sh && chmod +x add-btrfs-storage.sh
+curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/remove-btrfs-storage.sh && chmod +x add-btrfs-storage.sh
 ```
 
 使用脚本
 
 ```shell
-./remove-storage.sh
+./remove-btrfs-storage.sh
 ```
 
 # 添加已存在存储脚本使用说明
@@ -34,11 +34,11 @@ curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/remove-stora
 下载脚本
 
 ```shell
-curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/add-exsit-storage.sh && chmod +x add-btrfs-storage.sh
+curl -OL https://raw.githubusercontent.com/lwlf/ProxmoxVETools/main/add-existing-btrfs-storage.sh && chmod +x add-btrfs-storage.sh
 ```
 
 使用脚本
 
 ```shell
-./add-existing-storage.sh
+./add-existing-btrfs-storage.sh
 ```
