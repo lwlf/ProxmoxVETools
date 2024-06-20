@@ -118,7 +118,7 @@ partition_mount_path=/mnt/pve/$storage_name
 btrfs subvolume create $partition_mount_path
 # 挂载分区并设置开机挂载
 mount $select_disk_partition_name $partition_mount_path
-sed -i '$i\# New disk\n\UUID='"${select_disk_partition_uuid}"' '"${partition_mount_path}"' btrfs defaults,compress=lzo 0 1' /etc/fstab
+sed -i '$i\# New disk: '"${select_disk_partition_name}"'\nUUID='"${select_disk_partition_uuid}"' '"${partition_mount_path}"' btrfs defaults,compress=lzo 0 1' /etc/fstab
 # 获取 PVE 节点名称
 pve_current_node=$(pvecm nodes | grep "local" | awk '{print $3}')
 # 添加磁盘到 PVE 存储
