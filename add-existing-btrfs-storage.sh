@@ -38,5 +38,6 @@ fi
 # 添加 PVE 存储
 mount $partition_full_name $partition_mount_path
 sed -i '$i\# New disk: '"${partition_label_name}"'\nUUID='"${partition_uuid}"' '"${partition_mount_path}"' btrfs defaults,compress=lzo 0 1' /etc/fstab
-pve_current_node=$(pvecm nodes | grep "local" | awk '{print $3}')
+#pve_current_node=$(pvecm nodes | grep "local" | awk '{print $3}')
+pve_current_node=$(hostname)
 pvesm add btrfs $partition_label_name --path $partition_mount_path --nodes $pve_current_node
