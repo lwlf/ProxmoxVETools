@@ -45,7 +45,8 @@ fi
 # 移除 local-btrfs 存储
 pvesm remove local-btrfs
 # 添加存储
-pve_current_node=$(pvecm nodes | grep "local" | awk '{print $3}')
+#pve_current_node=$(pvecm nodes | grep "local" | awk '{print $3}')
+pve_current_node=$(hostname)
 pvesm add btrfs $storage_name --path $partition_mount_path --nodes $pve_current_node
 # 移动原数据至新目录
 mv /var/lib/pve/local-btrfs/* $partition_mount_path
