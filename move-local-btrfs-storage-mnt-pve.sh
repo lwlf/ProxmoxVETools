@@ -7,7 +7,8 @@ exit 1
 
 # 获取根目录磁盘分区
 system_partition=$(findmnt -T / -o SOURCE | awk 'NR==2')
-system_partition_properties=($(lsblk -lno name,tran,rota $system_partition))
+system_disk=$(lsblk -no pkname $system_partition)
+system_partition_properties=($(lsblk -ldno name,tran,rota $system_disk))
 
 ## 生成 PVE 存储名称
 # 获取存储类型
