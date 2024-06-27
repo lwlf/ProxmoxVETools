@@ -1,6 +1,6 @@
 #!/bin/bash
 
-test ! $(pvesm status | grep "local-btrfs") && echo "PVE 存储 local-btrfs 不存在"
+test ! "$(pvesm status | grep "local-btrfs")" && echo "PVE 存储 local-btrfs 不存在"
 
 # 获取根目录磁盘分区
 system_partition=$(findmnt -T / -o SOURCE | awk 'NR==2')
