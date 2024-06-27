@@ -101,7 +101,7 @@ storage_number=$(seq -f "%02g" 1 99 | grep -Ev "$number_pattern_str" | sort | aw
 # 处理为空时的序号
 test ! "$storage_number" && storage_number="00"
 # 获取存储大小
-select_disk_size=$(lsblk -dbno size $select_disk_full_name | numfmt --to=iec --format='%-1.0f')
+select_disk_size=$(lsblk -dbno size $select_disk_full_name | numfmt --to=si --round=down --format='%-1.0f')
 storage_size=${select_disk_size,,}'b'
 # 生成存储名称
 storage_name="${storage_type}-${storage_number}-${storage_size}-btrfs"
